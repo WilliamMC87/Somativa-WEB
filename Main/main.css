@@ -7,7 +7,6 @@
 
 body,
 .MainContainer {
-  height: 100vh;
   background-color: white;
 }
 
@@ -53,7 +52,12 @@ body,
   z-index: 1;
   background-color: #0450c2;
 }
-
+.containerIconNavBar {
+  transition: margin-left 0.3s ease;
+}
+.MainComponentsHome {
+  transition: margin-left 0.3s ease;
+}
 .IconNavBar {
   width: 30px;
   margin-left: 30px;
@@ -83,14 +87,26 @@ body,
 }
 
 .SideBarContainer {
-  padding: 31px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  z-index: 4;
+  position: fixed;
   background-color: #0450c2;
   display: none;
+  padding: 5px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   box-shadow: 2px 0px 0px 0px #c7c7c7;
   border-top: 1px solid #c7c7c7;
+  transition: display 0.3s ease;
+}
+
+.containerImg {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
 }
 
 .ImgLogo {
@@ -112,13 +128,15 @@ body,
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 30px;
-  
+  margin-top: 20px;
 }
 
-.itemList a{
+.itemList a {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
 .itemList:hover {
@@ -179,6 +197,7 @@ body,
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .Logotype {
@@ -190,9 +209,8 @@ body,
 
 .Exit {
   height: 24px;
-  width: 134%;
+  width: 100%;
   background-color: #0073dc;
-  margin-bottom: -390%;
 }
 
 .Exit :hover {
@@ -301,25 +319,48 @@ body,
   justify-content: center;
 }
 
-
-.ContanerImg{
+.ContanerImg {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-@media screen and (max-width:420px) {
-  .subNavbarContainer{
+@media screen and (max-width: 420px) {
+  .subNavbarContainer {
     width: 310px;
   }
-  .TextSubNavContainer, .IconSubNavConainerText{
+  .TextSubNavContainer,
+  .IconSubNavConainerText {
     font-size: 18px;
     margin-left: 10px;
   }
-  .ContainerCharts{
+  .ContainerCharts {
     display: flex;
     flex-direction: column;
-
+  }
+  .SideBarContainer {
+    width: 179px;
+  }
+  .ImgLogo {
+    width: 112px;
+  }
+  .containerOptions,
+  .subContainerOptions {
+    margin-right: 1px;
+  }
+  #RefreshButton {
+    display: none;
+  }
+  .ContainerNavbar,
+  .ContainerCharts {
+    width: 100%;
+  }
+  .containerChar {
+    margin: 0px;
+    margin-bottom: 200px;
+    margin-top: 50px;
+  }
+  .containerChar, .Bar {
+    width: 0px;
   }
 }
