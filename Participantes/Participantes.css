@@ -7,7 +7,7 @@
 
 body,
 .MainContainer {
-  height: 100vh;
+  
   background-color: white;
 }
 
@@ -74,7 +74,7 @@ body,
 .IconUserPhoto {
   width: 66px;
   height: 50px;
-  background-color: gray;
+  background-color: #0073dc;
   border-radius: 50%;
   margin-left: 5px;
 }
@@ -82,17 +82,9 @@ body,
   cursor: pointer;
 }
 
-.SideBarContainer {
-  padding: 31px;
-  background-color: #0450c2;
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 2px 0px 0px 0px #c7c7c7;
-  border-top: 1px solid #c7c7c7;
+.containerSubAbout {
+  margin: 50px;
 }
-
 .ImgLogo {
   width: 160px;
 }
@@ -297,30 +289,308 @@ body,
   width: 200px;
   height: auto;
 }
+
 .title {
-  border: solid 2px #0450c2;
+  width: 85%;
+  height: 50px;
+  color: white;
   border-radius: 10px;
   margin-top: 50px;
+  background-color: #0073dc;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .photos {
+  width: 53%;
   display: flex;
   justify-content: center;
-  width: 205px;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+img {
+  height: 200px;
+  margin: 50px;
+  margin-bottom: 0px;
 }
 
 .ContainerImagemParti {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid 2px #0450c2;
+  flex-direction: row;
+  margin-top: 95px;
+  border-radius: 10px;
   border-radius: 20px;
   margin-top: 95px;
 }
+.subContainerAbout {
+  display: flex;
+  flex-direction: row;
+}
 
-.Names {
-  display: inline-block;
-  margin-right: 10px;
-  border: solid #0450c2;
+.ImagemParticipantesI {
+  border: solid #0073dc;
   border-radius: 10px;
+}
+
+.ImagemParticipantesL {
+  width: 185px;
+  border-left: 25px;
+  border: solid #0073dc;
+  border-radius: 10px;
+}
+
+.ImagemParticipantesT {
+  width: 185px;
+  border-left: 25px;
+  border: solid #0073dc;
+  border-radius: 10px;
+}
+
+.ImagemParticipantesW {
+  width: 185px;
+  border: solid #0073dc;
+  border-radius: 10px;
+}
+.GitHub,
+.LinKedin {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+}
+
+.Github,
+.Linkedin,
+.User {
+  width: 151px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.Github > svg,
+.Linkedin > svg,
+.User > svg {
+  width: 50px;
+}
+.Github > p,
+.Linkedin > p,
+.User > p {
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.GitHub:hover,
+.LinKedin:hover,
+.User:hover {
+  cursor: pointer;
+}
+
+.position {
+  width: 190px;
+  height: 40px;
+  border-radius: 10px;
+  border: solid #0073dc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.number {
+  border: solid #0073dc;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background-color: #0073dc;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.I,
+.W,
+.T,
+.L {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.containerImagem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.subContainerAbout {
+  display: flex;
+  flex-direction: row;
+}
+.Containerphotos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#ImagemParticipant {
+  display: flex;
+}
+#SecondImage {
+  display: flex;
+}
+.subNavbarContainer {
+  margin: 0%;
+  margin-top: 10px;
+}
+
+.subContainerImgParti {
+  display: none;
+}
+
+@media screen and (max-width: 1200px) {
+}
+@media screen and (max-width: 992px) {
+  .containerImagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subContainerAbout{
+    display: none;
+   }
+  .Containerphotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #ImagemParticipant {
+    display: none;
+  }
+  #SecondImage {
+    display: flex;
+  }
+  .subNavbarContainer {
+    margin: 0%;
+    margin-top: 10px;
+    width: 85%;
+  }
+  .subContainerImgParti {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .containerImagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ .subContainerAbout{
+  display: none;
+ }
+  .Containerphotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #ImagemParticipant {
+    display: none;
+  }
+  #SecondImage {
+    display: flex;
+  }
+  .subNavbarContainer {
+    margin: 0%;
+    margin-top: 10px;
+  }
+  .subContainerImgParti {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 576px) {
+  .containerImagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subContainerAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Containerphotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #ImagemParticipant {
+    display: none;
+  }
+  #SecondImage {
+    display: flex;
+  }
+  .subNavbarContainer {
+    margin: 0%;
+    margin-top: 10px;
+  }
+  .subContainerImgParti {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .containerImagem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .subContainerAbout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .Containerphotos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #ImagemParticipant {
+    display: none;
+  }
+  #SecondImage {
+    display: flex;
+  }
+  .subNavbarContainer {
+    margin: 0%;
+    margin-top: 10px;
+  }
+  .subContainerImgParti {
+    display: flex;
+    flex-direction: column;
+  }
 }

@@ -31,7 +31,6 @@ body,
   display: flex;
   align-items: center;
   padding: 10px;
-
   background-color: #0450c2;
   display: flex;
   justify-content: space-between;
@@ -142,14 +141,6 @@ body,
 .itemList:hover {
   cursor: pointer;
 }
-.Dash:hover {
-  cursor: pointer;
-  background-color: blue;
-}
-
-.Not:hover {
-  background-color: #0d98ff;
-}
 
 .MainListText {
   font-size: 20px;
@@ -177,7 +168,7 @@ body,
 
 .containerChar {
   background-color: white;
-  margin: 100px;
+  margin: 52px;
 }
 
 .containerChar,
@@ -304,7 +295,9 @@ body,
 .EditUserImg:hover {
   cursor: pointer;
 }
-
+#SunIcon {
+  display: none;
+}
 .UserPictureIcon {
   width: 50px;
   z-index: 2;
@@ -325,9 +318,151 @@ body,
   justify-content: center;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 1200px) {
+  .ImgLogo {
+    width: 198px;
+  }
   .subNavbarContainer {
-    width: 310px;
+    width: 84%;
+  }
+  .ContainerCharts {
+    display: flex;
+    flex-direction: row;
+  }
+  /* .ContainerNavbar,
+  .ContainerCharts {
+    width: 100%;
+  } */
+  .containerChar {
+    margin: 0px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    margin-left: 41px;
+  }
+  .containerUserSettings {
+    width: 100%;
+    height: 310px;
+  }
+  .containerChar,
+  .Bar {
+    width: 100%;
+  }
+  .SideBarContainer {
+    width: 239px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .ImgLogo {
+    width: 198px;
+  }
+  .subNavbarContainer {
+    width: 84%;
+  }
+  .ContainerCharts {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .ContainerNavbar,
+  .ContainerCharts {
+    width: 100%;
+  } */
+  .containerChar {
+    margin: 0px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  .containerUserSettings {
+    width: 100%;
+    height: 310px;
+  }
+  .containerChar,
+  .Bar {
+    width: 100%;
+  }
+  .SideBarContainer {
+    width: 239px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ImgLogo {
+    width: 198px;
+  }
+  .subNavbarContainer {
+    width: 79%;
+  }
+  .ContainerCharts {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .ContainerNavbar,
+  .ContainerCharts {
+    width: 100%;
+  } */
+  .containerChar {
+    margin: 0px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  .containerUserSettings {
+    width: 100%;
+    height: 310px;
+  }
+  .containerChar,
+  .Bar {
+    width: 100%;
+  }
+  .SideBarContainer {
+    width: 239px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .ImgLogo {
+    width: 198px;
+  }
+  .subNavbarContainer {
+    width: 79%;
+  }
+  .ContainerCharts {
+    display: flex;
+    flex-direction: column;
+  }
+  /* .ContainerNavbar,
+  .ContainerCharts {
+    width: 100%;
+  } */
+  .containerChar {
+    margin: 0px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+  .containerUserSettings {
+    width: 100%;
+    height: 310px;
+  }
+  .containerChar,
+  .Bar {
+    width: 100%;
+  }
+  .SideBarContainer {
+    width: 219px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .containerUserSettings {
+    width: 100%;
+    height: 310px;
+  }
+  .userPicture {
+    width: 120px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: gray;
+    z-index: 1;
+    position: relative;
+  }
+  .subNavbarContainer {
+    width: 80%;
   }
   .TextSubNavContainer,
   .IconSubNavConainerText {
@@ -342,7 +477,7 @@ body,
     width: 179px;
   }
   .ImgLogo {
-    width: 112px;
+    width: 168px;
   }
   .containerOptions,
   .subContainerOptions {
@@ -357,10 +492,12 @@ body,
   }
   .containerChar {
     margin: 0px;
-    margin-bottom: 200px;
+    margin-bottom: 80px;
     margin-top: 50px;
   }
-  .containerChar, .Bar {
-    width: 0px;
+
+  .IconUserPhoto {
+    width: 60px;
+    height: 60px;
   }
 }

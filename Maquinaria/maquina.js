@@ -11,7 +11,7 @@ function hideSideBar() {
   document.getElementById("SideBarContainer").style.display = "none";
   document.getElementById("XIcon").style.display = "none";
   document.getElementById("MenuIcon").style.display = "flex";
-  document.getElementById("containerIconNavBar").style.marginLeft = "0%";
+  document.getElementById("containerIconNavBar").style.t = "0%";
   document.getElementById("MainComponentsHome").style.marginLeft = "";
 }
 
@@ -36,14 +36,6 @@ function showSideBar() {
     document.getElementById("containerIconNavBar").style.marginLeft = "16%";
   }
 }
-
-// function VerifyWidth(container) {
-//   if (container.style.display === "flex") {
-//     document.getElementById("subNavbarContainer").style.width = "94rem";
-//   } else {
-//     document.getElementById("subNavbarContainer").style.width = "102rem";
-//   }
-// }
 
 function FunDate() {
   var TextDate = document.getElementById("IconSubNavConainerText");
@@ -72,26 +64,6 @@ function plusSlides(n) {
 // Thumbnail image controls
 function currentSlide(n) {
   showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  // let i;
-  // let slides = document.getElementsByClassName("mySlides");
-  // let dots = document.getElementsByClassName("dot");
-  // if (n > slides.length) {
-  //   slideIndex = 1;
-  // }
-  // if (n < 1) {
-  //   slideIndex = slides.length;
-  // }
-  // for (i = 0; i < slides.length; i++) {
-  //   slides[i].style.display = "none";
-  // }
-  // for (i = 0; i < dots.length; i++) {
-  //   dots[i].className = dots[i].className.replace(" active", "");
-  // }
-  // slides[slideIndex - 1].style.display = "block";
-  // dots[slideIndex - 1].className += " active";
 }
 
 let BooleanTheme = false;

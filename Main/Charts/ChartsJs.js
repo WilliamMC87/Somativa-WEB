@@ -14,6 +14,7 @@ var BarChart = new Chart(document.getElementById("chartBar"), {
     ],
   },
   options: {
+    responsive: true,
     legend: {
       display: false,
     },
@@ -44,7 +45,7 @@ var areaData = {
 };
 
 var areaOptions = {
-  responsive: false,
+  responsive: true,
   scales: {
     x: {
       grid: {
@@ -75,6 +76,7 @@ const pieChartData = {
 };
 
 const pieChartOptions = {
+  responsive: true,
   title: {
     display: true,
     text: "Predicted world population (millions) in 2050",
@@ -121,7 +123,7 @@ var scatterData = {
 };
 
 var scatterOptions = {
-  responsive: false,
+  responsive: true,
   scales: {
     x: {
       type: "linear",
@@ -157,6 +159,7 @@ var LineChart = new Chart(ctx, {
     ],
   },
   options: {
+    responsive: true,
     scales: {
       y: {
         beginAtZero: true,
@@ -215,16 +218,18 @@ var ListChart = [BarChart, LineChart, PieChart, rangeBarChart];
 
 var WidthChart = screen.width;
 
-if (WidthChart <= 400) {
-  ListChart.forEach((item) =>{
-    if(item == BarChart){
+if (WidthChart <= 430) {
+  ListChart.forEach((item) => {
+    if (item == BarChart) {
       item.canvas.parentNode.style.width = "390px";
-    }else if(item == LineChart){
-      item.canvas.parentNode.style.width = "399px";
-    }else{
+    } else if (item == LineChart) {
+      item.canvas.parentNode.style.width = "350px";
+    } else if (item == areaCharts) {
+      item.canvas.parentNode.style.width = "372px";
+    } else {
       item.canvas.parentNode.style.width = "350px";
     }
-    
-  })
-} else if (WidthChart <= 560) {
+  });
+} else if (WidthChart <= 570) {
+  
 }
