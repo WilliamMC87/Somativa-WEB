@@ -1,8 +1,4 @@
-function heigthSideBar() {
-    document.getElementById("SideBarContainer").style.height =
-      window.screen.height;
-  }
-  heigthSideBar();
+
   
   function showUserSettings() {
     document.getElementById("containerUserSettings").style.display = "flex";

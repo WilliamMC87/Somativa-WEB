@@ -1,5 +1,3 @@
-let WidthScreen = screen.width;
-
 function showUserSettings() {
   document.getElementById("containerUserSettings").style.display = "flex";
 }
@@ -7,13 +5,19 @@ function hideUserSettings() {
   document.getElementById("containerUserSettings").style.display = "none";
 }
 
+function RefreshButton() {
+  window.location.reload();
+}
+
 function hideSideBar() {
   document.getElementById("SideBarContainer").style.display = "none";
   document.getElementById("XIcon").style.display = "none";
   document.getElementById("MenuIcon").style.display = "flex";
-  document.getElementById("containerIconNavBar").style.t = "0%";
+  document.getElementById("containerIconNavBar").style.marginLeft = "0%";
   document.getElementById("MainComponentsHome").style.marginLeft = "";
 }
+
+var WidthScreen = screen.width
 
 function showSideBar() {
   document.getElementById("SideBarContainer").style.display = "flex";
@@ -27,7 +31,7 @@ function showSideBar() {
   } else if (WidthScreen <= 768) {
     document.getElementById("containerIconNavBar").style.marginLeft = "43%";
   } else if (WidthScreen <= 992) {
-    document.getElementById("containerIconNavBar").style.marginLeft = "43%";
+    document.getElementById("containerIconNavBar").style.marginLeft = "53%";
   } else if (WidthScreen <= 1200) {
     document.getElementById("containerIconNavBar").style.marginLeft = "43%";
   } else if (WidthScreen <= 1700) {
@@ -35,6 +39,28 @@ function showSideBar() {
   } else {
     document.getElementById("containerIconNavBar").style.marginLeft = "16%";
   }
+}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  x[slideIndex - 1].style.display = "block";
 }
 
 function FunDate() {
@@ -53,24 +79,12 @@ function FunDate() {
 }
 FunDate();
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
 let BooleanTheme = false;
 
 function changeTheme() {
   BooleanTheme = !BooleanTheme;
 
+  console.log(BooleanTheme);
   if (BooleanTheme) {
     document.getElementById("SunIcon").style.display = "block";
     document.getElementById("MoonIcon").style.display = "none";
@@ -85,10 +99,12 @@ function changeTheme() {
       "#535353";
     document.getElementById("containerUserSettings").style.backgroundColor =
       "#535353";
+
+    document.getElementById("prev").style.backgroundColor = "#535353";
+    document.getElementById("next").style.backgroundColor = "#535353";
     document.getElementById("subNavbarContainer").style.boxShadow = "none";
-    document.getElementById("areaChartContainer").style.backgroundColor =
-      "white";
-    document.getElementById("MainContainer").style.backgroundColor = "#767676";
+    
+    
     document.querySelectorAll(".subContainerOptions").forEach((item) => {
       item.style.backgroundColor = "#535353";
     });
@@ -105,9 +121,11 @@ function changeTheme() {
       "#0450c2";
     document.getElementById("subNavbarContainer").style.backgroundColor =
       "#0450c2";
+    document.getElementById("prev").style.backgroundColor = "#0450c2";
+    document.getElementById("next").style.backgroundColor = "#0450c2";
     document.getElementById("containerUserSettings").style.backgroundColor =
       "#0450c2";
-    document.getElementById("MainContainer").style.backgroundColor = "white";
+    
 
     document.querySelectorAll(".subContainerOptions").forEach((item) => {
       item.style.backgroundColor = "#0450c2";

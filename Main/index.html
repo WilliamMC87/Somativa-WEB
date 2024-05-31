@@ -154,9 +154,11 @@
                   Dashboard
                 </a>
               </li>
-          
+
               <li class="itemList About">
-                <a onclick="navigationWeb('Maquinaria/machine.html')">
+                <a
+                  onclick="navigationWeb('CodigoSite/Maquinaria/machine.html')"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 512 512"
@@ -184,20 +186,22 @@
                     />
                   </svg>
                   <a
-                    
-                    onclick="navigationWeb('Participantes/Participantes.html')"
+                    onclick="navigationWeb('CodigoSite/Participantes/Participantes.html')"
                     >Sobre o time</a
                   >
                 </a>
               </li>
             </ul>
           </div>
-          <div class="Exit" id="Exit" onclick="navigationWeb('CodigoSite/Login/index.html')">
+          <div
+            class="Exit"
+            id="Exit"
+            onclick="navigationWeb('CodigoSite/Login/index.html')"
+          >
             <svg
               class="Saida"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
-              
             >
               <path
                 fill="#ffffff"
@@ -239,7 +243,7 @@
               <canvas id="chartBar"></canvas>
             </div>
             <div class="containerChar Bar" id="areaChartContainer">
-              <canvas id="areaChart" ></canvas>
+              <canvas id="areaChart"></canvas>
             </div>
           </div>
           <div class="ContainerCharts">
@@ -250,12 +254,11 @@
               <canvas id="areaChart1"></canvas>
             </div>
           </div>
-        
         </div>
       </div>
-
-      <script src="./main.js"></script>
-      <script src="./Charts/ChartsJs.js"></script>
+      <script src="main.js"></script>
+      <script src="../Main/Charts/ChartsJs.js"></script>
+      <script src="../Main/main.js"></script>
     </div>
   </body>
 </html>

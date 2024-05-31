@@ -1,4 +1,3 @@
-let WidthScreen = screen.width;
 
 function showUserSettings() {
   document.getElementById("containerUserSettings").style.display = "flex";
@@ -16,6 +15,7 @@ function hideSideBar() {
 }
 
 function showSideBar() {
+  let WidthScreen = screen.width;
   document.getElementById("SideBarContainer").style.display = "flex";
   document.getElementById("XIcon").style.display = "flex";
   document.getElementById("MenuIcon").style.display = "none";
@@ -31,19 +31,11 @@ function showSideBar() {
   } else if (WidthScreen <= 1200) {
     document.getElementById("containerIconNavBar").style.marginLeft = "43%";
   } else if (WidthScreen <= 1700) {
-    document.getElementById("containerIconNavBar").style.marginLeft = "43%";
+    document.getElementById("containerIconNavBar").style.marginLeft = "20%";
   } else {
     document.getElementById("containerIconNavBar").style.marginLeft = "16%";
   }
 }
-
-// function VerifyWidth(container) {
-//   if (container.style.display === "flex") {
-//     document.getElementById("subNavbarContainer").style.width = "94rem";
-//   } else {
-//     document.getElementById("subNavbarContainer").style.width = "102rem";
-//   }
-// }
 
 function FunDate() {
   var TextDate = document.getElementById("IconSubNavConainerText");
@@ -61,41 +53,7 @@ function FunDate() {
 }
 FunDate();
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
-
-function showSlides(n) {
-  // let i;
-  // let slides = document.getElementsByClassName("mySlides");
-  // let dots = document.getElementsByClassName("dot");
-  // if (n > slides.length) {
-  //   slideIndex = 1;
-  // }
-  // if (n < 1) {
-  //   slideIndex = slides.length;
-  // }
-  // for (i = 0; i < slides.length; i++) {
-  //   slides[i].style.display = "none";
-  // }
-  // for (i = 0; i < dots.length; i++) {
-  //   dots[i].className = dots[i].className.replace(" active", "");
-  // }
-  // slides[slideIndex - 1].style.display = "block";
-  // dots[slideIndex - 1].className += " active";
-}
-
 let BooleanTheme = false;
-
 function changeTheme() {
   BooleanTheme = !BooleanTheme;
 
@@ -142,6 +100,19 @@ function changeTheme() {
     });
     document.getElementById("Exit").style.backgroundColor = "#0073DC";
   }
+}
+
+let slideIndex = 1;
+
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
 }
 
 function navigationWeb(url) {
