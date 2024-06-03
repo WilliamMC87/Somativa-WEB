@@ -14,20 +14,6 @@ const client = new MongoClient(uri, {
 });
 app.use(cors());
 
-app.post("/producao", async (req, res) => {
-  await client.connect();
-
-  await client.db("admin").command({ ping: 1 });
-
-  const database = client.db("Teste");
-  const collection = await database.collection("Pecas").find({}).toArray();
-
-  try {
-    res.status(201).send(collection);
-  } catch (error) {
-    res.status(400).send(error);
-  }
-});
 
 app.get("/chart-data-pequena", async (req, res) => {
   await client.connect();
@@ -35,16 +21,18 @@ app.get("/chart-data-pequena", async (req, res) => {
   await client.db("admin").command({ ping: 1 });
 
   const database = client.db("AutomationMange");
-  const collection = await database
-    .collection("PecasPequenas")
-    .find({})
-    .toArray();
+  setInterval(async function () {
+    const collection = await database
+      .collection("PecasPequenas")
+      .find({})
+      .toArray();
 
-  try {
-    res.status(200).send(collection);
-  } catch (error) {
-    res.status(500).send(error);
-  }
+    try {
+      res.status(200).send(collection);
+    } catch (error) {
+      res.status(500).send(error);
+    }
+  },1000);
 });
 
 app.get("/chart-data-media", async (req, res) => {
@@ -53,16 +41,18 @@ app.get("/chart-data-media", async (req, res) => {
   await client.db("admin").command({ ping: 1 });
 
   const database = client.db("AutomationMange");
-  const collection = await database
-    .collection("PecasMedias")
-    .find({})
-    .toArray();
+  setInterval(async function () {
+    const collection = await database
+      .collection("PecasMedias")
+      .find({})
+      .toArray();
 
-  try {
-    res.status(200).send(collection);
-  } catch (error) {
-    res.status(500).send(error);
-  }
+    try {
+      res.status(200).send(collection);
+    } catch (error) {
+      res.status(500).send(error);
+    }
+  },1000);
 });
 
 app.get("/chart-data-grande", async (req, res) => {
@@ -71,16 +61,19 @@ app.get("/chart-data-grande", async (req, res) => {
   await client.db("admin").command({ ping: 1 });
 
   const database = client.db("AutomationMange");
-  const collection = await database
-    .collection("PecasGrandes")
-    .find({})
-    .toArray();
 
-  try {
-    res.status(200).send(collection);
-  } catch (error) {
-    res.status(500).send(error);
-  }
+  setInterval(async function () {
+    const collection = await database
+      .collection("PecasGrandes")
+      .find({})
+      .toArray();
+
+    try {
+      res.status(200).send(collection);
+    } catch (error) {
+      res.status(500).send(error);
+    }
+  }, 1000);
 });
 
 const PORT = process.env.PORT || 3000;
@@ -100,3 +93,4 @@ async function Delete() {
     })
     .catch((err) => console.log(err));
 }
+// Delete()

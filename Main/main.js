@@ -1,4 +1,3 @@
-
 function showUserSettings() {
   document.getElementById("containerUserSettings").style.display = "flex";
 }
@@ -7,7 +6,8 @@ function hideUserSettings() {
 }
 
 function hideSideBar() {
-  document.getElementById("SideBarContainer").style.display = "none";
+  document.getElementById("SideBarContainer").style.transform =
+    "translateX(-100%)";
   document.getElementById("XIcon").style.display = "none";
   document.getElementById("MenuIcon").style.display = "flex";
   document.getElementById("containerIconNavBar").style.marginLeft = "0%";
@@ -16,22 +16,23 @@ function hideSideBar() {
 
 function showSideBar() {
   let WidthScreen = screen.width;
-  document.getElementById("SideBarContainer").style.display = "flex";
+  document.getElementById("SideBarContainer").style.transform =
+    "translateX(0%)";
   document.getElementById("XIcon").style.display = "flex";
   document.getElementById("MenuIcon").style.display = "none";
 
   if (WidthScreen <= 430) {
     document.getElementById("containerIconNavBar").style.marginLeft = "43%";
-  } else if (WidthScreen <= 576) {
+  } else if (WidthScreen >= 430 && WidthScreen <= 576) {
     document.getElementById("containerIconNavBar").style.marginLeft = "43%";
-  } else if (WidthScreen <= 768) {
+  } else if (WidthScreen >= 576 && WidthScreen <= 768) {
     document.getElementById("containerIconNavBar").style.marginLeft = "43%";
-  } else if (WidthScreen <= 992) {
+  } else if (WidthScreen >= 768 && WidthScreen <= 992) {
     document.getElementById("containerIconNavBar").style.marginLeft = "43%";
-  } else if (WidthScreen <= 1200) {
-    document.getElementById("containerIconNavBar").style.marginLeft = "43%";
-  } else if (WidthScreen <= 1700) {
-    document.getElementById("containerIconNavBar").style.marginLeft = "20%";
+  } else if (WidthScreen >= 992 && WidthScreen <= 1200) {
+    document.getElementById("containerIconNavBar").style.marginLeft = "50%";
+  } else if (WidthScreen >= 1200 && WidthScreen <= 1700) {
+    document.getElementById("containerIconNavBar").style.marginLeft = "30%";
   } else {
     document.getElementById("containerIconNavBar").style.marginLeft = "16%";
   }
@@ -103,7 +104,6 @@ function changeTheme() {
 }
 
 let slideIndex = 1;
-
 
 // Next/previous controls
 function plusSlides(n) {

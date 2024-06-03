@@ -14,10 +14,10 @@
   },
   "name": "codigosite",
   "version": "1.0.0",
-  "main": "./DatabaseConnection/scriptConnect.js",
+  "main": "./DatabaseConnection/api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ../scriptConnect.js"
+    "start": "nodemon ../api.js"
   },
   "keywords": [],
   "author": "",

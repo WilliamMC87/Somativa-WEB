@@ -169,6 +169,17 @@ function updateChart(DataPeca) {
     },
   });
 
+  DataPeca.forEach(element => {
+    return {
+          
+      label: "Quantidade das Peças",
+
+      backgroundColor: ["#0450C2", "#0073DC", "#0D98FF"],
+
+      data: DataPeca,
+    }   
+  });
+
   var BarChart = new Chart(document.getElementById("chartBar"), {
     type: "bar",
     data: {
@@ -176,6 +187,7 @@ function updateChart(DataPeca) {
       // Conjuntos de dados
       datasets: [
         {
+          
           label: "Quantidade das Peças",
 
           backgroundColor: ["#0450C2", "#0073DC", "#0D98FF"],

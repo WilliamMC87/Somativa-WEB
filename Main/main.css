@@ -96,14 +96,15 @@ body,
   position: fixed;
   background-color: #0450c2;
   transition: background-color 2s ease;
-  display: none;
+  display: flex;
   padding: 5px;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   box-shadow: 2px 0px 0px 0px #c7c7c7;
   border-top: 1px solid #c7c7c7;
-  transition: display 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: translateX(-100%);
 }
 
 .containerImg {

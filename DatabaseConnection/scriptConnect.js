@@ -41,29 +41,30 @@ async function run() {
 }
 // run();
 
-// client.connect();
-// // Send a ping to confirm a successful connection
-// client.db("admin").command({ ping: 1 });
-// const Data = new Date();
-// const database = client.db("AutomationMange");
-// let List = ["PecasGrandes", "PecasMedias", "PecasPequenas"];
+client.connect();
+// Send a ping to confirm a successful connection
+client.db("admin").command({ ping: 1 });
+const Data = new Date();
+const database = client.db("AutomationMange");
+let List = ["PecasGrandes", "PecasMedias", "PecasPequenas"];
+let ListNUmber = [9, 50, 100]
 
 // List.forEach((element) => {
-//   for (let index = 0; index < Math.floor(Math.random() * 100); index++) {
-//     const colletion = database.collection(element);
-//     colletion.insertOne({
-//       data: `${
-//         Data.getDate().toString().length === 1
-//           ? `0${Data.getDate()}`
-//           : Data.getDate()
-//       }/${
-//         Data.getMonth().toString().length === 1
-//           ? `0${Data.getMonth() + 1}`
-//           : Data.getMonth() + 1
-//       }/${Data.getFullYear()}`,
-//     });
-    
-//   }
-//   console.log("Add");
+for (let index = 0; index < 100; index++) {
+  const colletion = database.collection("PecasPequenas");
+  colletion.insertOne({
+    data: `${
+      Data.getDate().toString().length === 1
+        ? `0${Data.getDate()}`
+        : Data.getDate()
+    }/${
+      Data.getMonth().toString().length === 1
+        ? `0${Data.getMonth() + 1}`
+        : Data.getMonth() + 1
+    }/${Data.getFullYear()}`,
+  });
+  
+}
+console.log("Add");
 // });
-// console.log("Sucesso");
+console.log("Sucesso");
