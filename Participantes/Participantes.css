@@ -32,7 +32,7 @@ body,
   align-items: center;
   padding: 10px;
 
-  background-color: #0450c2;
+  background-color: #c20404;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -50,7 +50,7 @@ body,
   margin-left: 20px;
   margin-right: 20px;
   z-index: 1;
-  background-color: #0450c2;
+  background-color: #c20404;
 }
 
 .IconNavBar {
@@ -73,7 +73,7 @@ body,
 .IconUserPhoto {
   width: 66px;
   height: 50px;
-  background-color: #0073dc;
+  background-color: #c20404;
   border-radius: 50%;
   margin-left: 5px;
 }
@@ -116,11 +116,10 @@ body,
 }
 .Dash:hover {
   cursor: pointer;
-  background-color: blue;
 }
 
 .Not:hover {
-  background-color: #0d98ff;
+  background-color: #c20404;
 }
 
 .MainListText {
@@ -157,7 +156,6 @@ body,
   width: 500px;
   border-radius: 20px;
 }
-
 
 .ContainerCharts {
   display: flex;
@@ -215,13 +213,13 @@ body,
   right: 0;
   top: 0;
   border-radius: 20px 0px 0px 20px;
-  border-bottom: 0.1px solid black;
-  border-top: 0.1px solid black;
-  border-left: 0.1px solid black;
+  border-bottom: 0.1px solid white;
+  border-top: 0.1px solid white;
+  border-left: 0.1px solid white;
   display: none;
   flex-direction: row-reverse;
   justify-content: space-between;
-  background-color: #0450c2;
+  background-color: #c20404;
 }
 
 .ListOptions {
@@ -278,7 +276,7 @@ body,
   color: white;
   border-radius: 10px;
   margin-top: 50px;
-  background-color: #0073dc;
+  background-color: #c20404;
   font-size: 16px;
   display: flex;
   align-items: center;
@@ -311,21 +309,21 @@ body,
 }
 
 .ImagemParticipantesI {
-  border: solid #0073dc;
+  border: solid #c20404;
   border-radius: 10px;
 }
 
 .ImagemParticipantesL {
   width: 185px;
   border-left: 25px;
-  border: solid #0073dc;
+  border: solid #c20404;
   border-radius: 10px;
   height: 187px;
 }
 .ImagemParticipantesI {
   width: 185px;
   border-left: 25px;
-  border: solid #0073dc;
+  border: solid #c20404;
   border-radius: 10px;
   height: 187px;
 }
@@ -333,14 +331,14 @@ body,
 .ImagemParticipantesT {
   width: 185px;
   border-left: 25px;
-  border: solid #0073dc;
+  border: solid #c20404;
   border-radius: 10px;
   height: 187px;
 }
 
 .ImagemParticipantesW {
   width: 185px;
-  border: solid #0073dc;
+  border: solid #c20404;
   border-radius: 10px;
   height: 187px;
 }
@@ -385,25 +383,13 @@ body,
   width: 190px;
   height: 40px;
   border-radius: 10px;
-  border: solid #0073dc;
+  border: solid #c20404;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 20px;
 }
 
-.number {
-  border: solid #0073dc;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  background-color: #0073dc;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 #SecondImage > p {
   font-size: 27px;

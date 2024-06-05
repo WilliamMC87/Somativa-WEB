@@ -32,7 +32,7 @@ function showSideBar() {
   } else if (WidthScreen >= 992 && WidthScreen <= 1200) {
     document.getElementById("containerIconNavBar").style.marginLeft = "50%";
   } else if (WidthScreen >= 1200 && WidthScreen <= 1700) {
-    document.getElementById("containerIconNavBar").style.marginLeft = "30%";
+    document.getElementById("containerIconNavBar").style.marginLeft = "39%";
   } else {
     document.getElementById("containerIconNavBar").style.marginLeft = "16%";
   }
@@ -62,6 +62,10 @@ function changeTheme() {
     document.getElementById("SunIcon").style.display = "block";
     document.getElementById("MoonIcon").style.display = "none";
 
+    if (document.getElementById("title")) {
+      document.getElementById("title").style.backgroundColor = "#535353";
+    }
+
     document.getElementById("SideBarContainer").style.backgroundColor =
       "#535353";
     document.getElementById("NavBarContainer").style.backgroundColor =
@@ -83,7 +87,9 @@ function changeTheme() {
   } else {
     document.getElementById("SunIcon").style.display = "none";
     document.getElementById("MoonIcon").style.display = "block";
-
+    if (document.getElementById("title")) {
+      document.getElementById("title").style.backgroundColor = "#0450c2";
+    }
     document.getElementById("SideBarContainer").style.backgroundColor =
       "#0450c2";
     document.getElementById("NavBarContainer").style.backgroundColor =

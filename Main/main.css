@@ -7,7 +7,7 @@
 
 body,
 .MainContainer {
-  background-color: white;
+  background-color: black; 
   transition: background-color 2s ease;
 }
 
@@ -28,11 +28,11 @@ body,
 
 .NavBarContainer {
   height: 100px;
-  background-color: white;
+  background-color: black; 
   display: flex;
   align-items: center;
   padding: 10px;
-  background-color: #0450c2;
+  background-color: #FF0000; 
   transition: background-color 2s ease;
   display: flex;
   justify-content: space-between;
@@ -51,19 +51,23 @@ body,
   margin-left: 20px;
   margin-right: 20px;
   z-index: 1;
-  background-color: #0450c2;
+  background-color: #FF0000; 
   transition: background-color 2s ease;
 }
+
 .containerIconNavBar {
   transition: margin-left 0.3s ease;
 }
+
 .MainComponentsHome {
   transition: margin-left 0.3s ease;
 }
+
 .IconNavBar {
   width: 30px;
   margin-left: 30px;
 }
+
 #XIcon,
 #MenuIcon {
   cursor: pointer;
@@ -84,6 +88,7 @@ body,
   border-radius: 50%;
   margin-left: 5px;
 }
+
 .IconUserPhoto:hover {
   cursor: pointer;
 }
@@ -94,7 +99,7 @@ body,
   height: 100%;
   z-index: 4;
   position: fixed;
-  background-color: #0450c2;
+  background-color: #FF0000; 
   transition: background-color 2s ease;
   display: flex;
   padding: 5px;
@@ -152,7 +157,7 @@ body,
   font-weight: 400;
   margin-top: 30px;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
+  color: white; 
 }
 
 .IconSideBar {
@@ -160,6 +165,7 @@ body,
   height: 26px;
   margin-right: 20px;
 }
+
 .Saida {
   width: 20px;
   height: 26px;
@@ -189,6 +195,7 @@ body,
   justify-content: center;
   flex-direction: column;
 }
+
 .ContainerCharts {
   display: flex;
   flex-direction: row;
@@ -206,7 +213,7 @@ body,
 .Exit {
   height: 24px;
   width: 100%;
-  background-color: #0073dc;
+  background-color: #dc0000;
 }
 
 .Exit :hover {
@@ -216,22 +223,24 @@ body,
 .subNavbarContainer {
   width: 85%;
   height: 50px;
-  background-color: white;
+  background-color: black; 
   border-radius: 10px;
   box-shadow: 0px 3px 1px 1px #c7c7c7;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
-  background-color: #0450c2;
+  background-color: #FF0000; 
   transition: background-color 2s ease;
 }
+
 .TextSubNavContainer {
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif;
   margin-left: 20px;
   color: white;
 }
+
 .containerData {
   display: flex;
   align-items: center;
@@ -251,7 +260,7 @@ body,
 .containerUserSettings {
   width: 500px;
   height: 400px;
-  background-color: white;
+  background-color: black; 
   z-index: 3;
   position: absolute;
   right: 0;
@@ -263,7 +272,7 @@ body,
   display: none;
   flex-direction: row-reverse;
   justify-content: space-between;
-  background-color: #0450c2;
+  background-color: #FF0000; 
   transition: background-color 2s ease;
 }
 
@@ -272,6 +281,7 @@ body,
   display: flex;
   flex-direction: column;
 }
+
 .Options {
   margin-left: 15px;
   margin-bottom: 17px;
@@ -287,7 +297,7 @@ body,
   width: 160px;
   height: 140px;
   border-radius: 20px;
-  background-color: gray;
+  background-color: black; 
   z-index: 1;
   position: relative;
 }
@@ -302,31 +312,33 @@ body,
 .EditUserImg:hover {
   cursor: pointer;
 }
-#SunIcon {
-  display: none;
-}
-.UserPictureIcon {
-  width: 50px;
-  z-index: 2;
-  position: absolute;
-  top: 96px;
-  left: 110px;
-}
 
-.containerChar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+@media screen and (max-width: 1700px) {
+  .subNavbarContainer {
+    width: 84%;
+  }
+  .ContainerCharts {
+    display: flex;
+    flex-direction: row;
+  }
 
-.ContanerImg {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  .containerChar {
+    margin: 0px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+    margin-left: 41px;
+  }
+  .containerUserSettings {
+    width: 100%;
+    height: 310px;
+  }
+  .containerChar,
+  .Bar {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-  
   .subNavbarContainer {
     width: 84%;
   }
@@ -352,12 +364,11 @@ body,
   .Bar {
     width: 100%;
   }
- 
 }
+
 @media screen and (max-width: 992px) {
   .MainComponentsHome {
     display: block;
-    
   }
   .subNavbarContainer {
     width: 94%;
@@ -366,10 +377,10 @@ body,
     display: flex;
     flex-direction: column;
   }
-  /* .ContainerNavbar,
-  .ContainerCharts {
-    width: 100%;
-  } */
+  .containerChar,
+  .Bar {
+    width: 519px;
+  }
   .containerChar {
     margin: 0px;
     margin-bottom: 80px;
@@ -383,10 +394,9 @@ body,
   .Bar {
     width: 100%;
   }
- 
 }
+
 @media screen and (max-width: 768px) {
-  
   .subNavbarContainer {
     width: 79%;
   }
@@ -411,10 +421,9 @@ body,
   .Bar {
     width: 100%;
   }
- 
 }
+
 @media screen and (max-width: 576px) {
-  
   .subNavbarContainer {
     width: 79%;
   }
@@ -453,7 +462,7 @@ body,
     width: 120px;
     height: 100px;
     border-radius: 20px;
-    background-color: gray;
+    background-color: black; 
     z-index: 1;
     position: relative;
   }
@@ -487,7 +496,7 @@ body,
   .ContainerCharts {
     width: 100%;
   }
-  .ContainerNavbar{
+  .ContainerNavbar {
     margin: 0%;
   }
   .containerChar {
@@ -499,5 +508,67 @@ body,
   .IconUserPhoto {
     width: 60px;
     height: 60px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .containerUserSettings {
+    width: 100%;
+    height: 310px;
+  }
+  .userPicture {
+    width: 120px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: black; 
+    z-index: 1;
+    position: relative;
+  }
+  .subNavbarContainer {
+    width: 80%;
+    margin-top: 20px;
+  }
+  .TextSubNavContainer,
+  .IconSubNavConainerText {
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  .ContainerCharts {
+    display: flex;
+    flex-direction: column;
+  }
+  .SideBarContainer {
+    width: 179px;
+  }
+  .ImgLogo {
+    width: 168px;
+  }
+  .containerOptions,
+  .subContainerOptions {
+    margin-right: 1px;
+  }
+  #RefreshButton {
+    display: none;
+  }
+  .ContainerNavbar,
+  .ContainerCharts {
+    width: 100%;
+  }
+  .ContainerNavbar {
+    margin: 0%;
+  }
+  .containerChar {
+    margin: 0px;
+    margin-bottom: 80px;
+    margin-top: 50px;
+  }
+
+  .IconUserPhoto {
+    width: 60px;
+    height: 60px;
+  }
+  .containerChar,
+  .Bar {
+    width: 95%;
   }
 }
